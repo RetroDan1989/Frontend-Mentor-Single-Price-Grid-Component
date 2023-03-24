@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+--Cyan: hsl(179, 62%, 43%);
+--Bright_Yellow: hsl(71, 73%, 54%);
+--Light_Gray: hsl(204, 43%, 93%);
+--Grayish_Blue: hsl(218, 22%, 67%);
+
+}
+
+body {
+    font-size: 16px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+
+@media screen and (min-width:375px) {
+
+    body {
+        background-color: whitesmoke;
+    }
+    
+}
+
+.container {
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 72px;
+    margin-bottom: 72px;
+    max-width: 640px;
+
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.8);
+
+}
+
+
+.header, .section01, .section02 {
+    min-width: 312px;
+    padding: 30px 25px;
+}
+
+/* Header start */
+.header h1 {
+    font-size: 22px;
+    color: var(--Cyan);
+    margin-bottom: 35px;
+}
+
+.header h2 {
+    font-size: 16px;
+    color: var(--Bright_Yellow);
+    margin-bottom: 25px;
+}
+
+.header p {
+    color: var(--Grayish_Blue);
+    width: 100%;
+    line-height: 1.5rem;
+    font-size: 15px;
+}
+/* Header end */
+
+/* Section Monthly Subscription  start */
+.section01 {
+    background-color:  #38a685 ;
+    color: var(--Light_Gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section01 h3 {
+    font-size: 22px;
+    margin-bottom: 26px;
+}
+
+.section01 h4 {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.section01 span {
+    font-size: 12px;
+    color: whitesmoke;
+}
+
+.section01 p {
+    margin-bottom: 30px;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+button {
+    width: 264px;
+    background-color: var(--Bright_Yellow);
+    color: white;
+    font-size: 16px;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.8);
+    cursor: pointer;
+    
+}
+button:hover {
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+}
+/* Section Monthly Subscription  end */
+
+/* Section Why us start */
+.section02 {
+    background-color: var(--Cyan);
+    color: var(--Light_Gray);
+}
+.section02 h3 {
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+.section02 p {
+    width: 75%;
+}
+/* Section Why us end */
+
+/* Desktop */
+@media screen and (min-width:768px) {
+
+    .header {
+        grid-area: header;
+        width: 80%;
+    }
+
+    .section01 {
+        grid-area: section01;
+    }
+
+    .section02 {
+        grid-area: section02;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: 
+        "header header"
+        "section01 section02"
+        ;
+    }
+    
+}
+/* Desktop */
+
